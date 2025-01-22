@@ -18,8 +18,8 @@ function Drop(){
             <input {...getInputProps()} />
                 {
                 isDragActive ?
-            <p className="text">Suelte el archivo aquí ...</p> :
-            <p className="text">Arrastre y suelte el archivo aquí, o haga click para seleccionar el archivo</p>
+            <p className="drop-text">Suelte el archivo aquí ...</p> :
+            <p className="drop-text">Arrastre y suelte el archivo aquí,  <br /> o haga click para seleccionar el archivo</p>
                 }
         </div>
     );}

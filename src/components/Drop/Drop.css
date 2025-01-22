@@ -1,22 +1,26 @@
 .dropArea{
-    background: rgba(133, 189, 202, 0.9);
+    background: rgba(133, 189, 202, 0.8);
     width: 100%;
     display: block;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 10%;
+    padding: 5%;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
+    height: 5rem;
+    border: 1px dotted rgba(133, 189, 202, 1);
   }
 
 .dropArea:hover{
     background: rgba(133, 189, 202, 0.6);
 }
 
-.text{
+.drop-text{
+  text-align: center;
   font-weight: bold;
-  font-size: 1em;
-  color: #efefef
+  font-size: 1rem;
+  color: #efefef;
+  overflow-wrap: break-word;
 }

@@ -22,6 +22,7 @@
     text-align: center;
     margin: auto;
     overflow-wrap: break-word;
+    max-width: 400px;
   }
 
   p{

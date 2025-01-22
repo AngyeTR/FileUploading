@@ -21,14 +21,14 @@ function Notification(){
             return(
                 <>
                     <VscLoading className="loadingIcon"/>
-                    <p>Loading</p>
+                    <p className="notification-text">Loading</p>
                 </>
             )  }
         else if(result.url){
             return(
                 <>
                     <FaRegCheckCircle className="sucessIcon"/>
-                    <p>El archivo ha sido enviado</p>
+                    <p className="notification-text">El archivo ha sido enviado</p>
                     <button onClick={handleClick}>Cerrar</button>
                 </>  
                 )
@@ -36,7 +36,7 @@ function Notification(){
             return(
                 <>
                      <FaRegCircleXmark className="sucessIcon"/>
-                     <p>Algo salió mal, por favor intente de nuevo</p>
+                     <p className="notification-text">Algo salió mal, por favor intente de nuevo</p>
                      <button onClick={handleClick}>Cerrar</button>
 
                 </>

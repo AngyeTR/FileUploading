@@ -1,4 +1,4 @@
-export const API_HOST = "https://api.cloudinary.com/v1_1/doyhzunyk/auto/upload";
+export const API_HOST = "https://api.cloudinary.com/v1_1/doyhzunyk/auto/uploa";
 
 export const UPLOAD_PRESET = "unsigned";
 

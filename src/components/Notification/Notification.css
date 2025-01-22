@@ -13,6 +13,19 @@
     animation-iteration-count: infinite;
   }
   
+  .notification-container{
+    display: block;
+    justify-items: center;
+  }
+
+.notification-text{
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    color: #192939
+  }
+
   @keyframes loading {
     0%   {transform: rotate(0deg)}
     50%  {transform: rotate(180deg)}
