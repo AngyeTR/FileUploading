@@ -1,0 +1,16 @@
+.banner-container{
+    width: 100%;
+    border-bottom: 5;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 20px;
+    border-bottom: 35px solid #192939;
+    background-color: white;
+    
+}
+.image{
+    height: 40px;
+    margin-left: 50px;
+
+}

@@ -1,0 +1,32 @@
+.preview-container{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-left: auto;
+  }
+
+  .notAva {
+    text-align: center;
+    color: red;
+    margin: auto;
+  }
+  .fileName{
+    text-align: center;
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+
+  p{
+    color: #5e707f;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    margin-bottom: 0;
+  }

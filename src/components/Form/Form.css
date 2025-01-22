@@ -1,0 +1,12 @@
+.form{
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+.btn{
+    padding: 3%;
+    margin-top: 2%;
+    min-width: 120px;
+}
