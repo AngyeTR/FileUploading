@@ -1,11 +1,12 @@
 .form{
+  margin-top: 0;
     width: 100%; 
     justify-content: center;
-    align-items: center;
+    align-items:start;
   }
 
 .btn{
-    padding: 3%;
+    padding: 10px;
     margin-top: 2%;
     min-width: 120px;
     margin-bottom: 2%;
