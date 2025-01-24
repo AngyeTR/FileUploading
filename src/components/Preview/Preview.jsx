@@ -14,8 +14,7 @@ function Preview(){
                 <>
                 <img className="preview" src={URL.createObjectURL(file)} alt=""/>
                 <p className="fileName">{file.name }</p>
-                </>
-                     
+                </>                  
                 )
             }
             else 

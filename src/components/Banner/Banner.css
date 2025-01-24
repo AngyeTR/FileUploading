@@ -8,7 +8,7 @@
     border-bottom: 35px solid #192939;
     background-color: white;
     margin-bottom: 0;
-    
+    display:block;
 }
 .image{
     height: 40px;

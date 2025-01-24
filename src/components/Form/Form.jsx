@@ -16,7 +16,6 @@ function Form(){
         const response = await uploadFile(file);
         updateResponse(response); 
     }
-    console.log("existe?", ENABLED_TYPES.includes(type))
     const enabled = ENABLED_TYPES.includes(type)
     
 

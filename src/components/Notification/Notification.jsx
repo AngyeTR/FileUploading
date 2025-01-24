@@ -1,30 +1,45 @@
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegCircleXmark } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import { VscLoading } from "react-icons/vsc";
 import { useFileStore } from "../../store/fileStore";
 import "./Notification.css"
 
-function Notification(){
+function Notification(props){
+    const mode = props.mode;
     const result = useFileStore( state => state.uploadingResult);
     const setResult = useFileStore( state => state.setUploadingResult);
     const setFile = useFileStore(state => state.setFile);
     const updateModalStatus = useFileStore( state => state.updateModalStatus);
+    const setAccessToken = useFileStore(state => state.setAccessToken)
+    const loginAttemp = useFileStore(state => state.loginAttemp);
+    const setLoginAttemp = useFileStore(state => state.setLoginAttemp)
+
+    const navigate = useNavigate();
 
     function handleClick(){
+        if (mode =="login"){
+              setLoginAttemp(null);
+              navigate("/")
+        }
         setResult(null);
         setFile(null);
-        updateModalStatus(false);
+        updateModalStatus(false);  
     }
+    const verification = mode== "login" ? loginAttemp : result
 
     function render(){
-        if(!result){
+        console.log("mode", mode)
+        if(!verification){
+            console.log("opcion 1")
             return(
                 <>
                     <VscLoading className="loadingIcon"/>
                     <p className="notification-text">Loading</p>
                 </>
             )  }
-        else if(result.url){
+        else if(verification.url){
+            console.log("opcion b")
             return(
                 <>
                     <FaRegCheckCircle className="sucessIcon"/>
@@ -32,8 +47,22 @@ function Notification(){
                     <button onClick={handleClick}>Cerrar</button>
                 </>  
                 )
-        }   else 
+        }  
+        else if(verification.status){
+            setAccessToken(verification.token)
+            updateModalStatus(false);
+             navigate("/uploadFile")
             return(
+                <>
+                </>  
+                )
+        }  
+        
+        else 
+        console.log("opcionc")
+        
+            return(
+                
                 <>
                      <FaRegCircleXmark className="sucessIcon"/>
                      <p className="notification-text">Algo salió mal, por favor intente de nuevo</p>
