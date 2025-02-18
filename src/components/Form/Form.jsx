@@ -1,4 +1,4 @@
-import { uploadFile } from "../../utils/upload";
+import { uploadFile, uploadFileGFA } from "../../utils/upload";
 import { useFileStore } from "../../store/fileStore"
 import Drop from "../Drop/Drop";
 import "./Form.css";
@@ -13,17 +13,23 @@ function Form(){
     const handleSubmit = async e =>{
         e.preventDefault();
         updateModalStatus(true);
-        const response = await uploadFile(file);
+        const response = await uploadFileGFA(file);
+        // const response = await uploadFile(file);
+        console.log("response", response)
+
         updateResponse(response); 
     }
     const enabled = ENABLED_TYPES.includes(type)
     
 
     return (
-        <form onSubmit={handleSubmit} className="form">
+        <>
+         <form onSubmit={handleSubmit} className="form">
             <Drop/>
             <button disabled={!enabled} className="btn">Enviar</button>
         </form>
+        </>
+       
     )
 ;}
 

@@ -10,7 +10,7 @@ export const  useFileStore = create((set) => ({
     setUploadingResult:(newUploadingResult) => set({ uploadingResult: newUploadingResult }),
     updateModalStatus: (newModalStatus) => set({ modalStatus: newModalStatus }),
     setAccessToken: (newAccessToken) => set({accessToken: newAccessToken}),
-    setLoginAttemp: (newLoginAttempt) => set({ loginAttemp: newLoginAttempt})
+    setLoginAttemp: (newLoginAttempt) => set({ loginAttemp: newLoginAttempt}),
 
 }))
 

@@ -6,17 +6,18 @@ import Modal from "../../components/Modal/Modal";
 import "./UploadFilesPage.css"
 import LogoutBtn from "../../components/Logout-btn.jsx/Logout-btn";
 import ExpiredSession from "../../components/SesionExpired/ExpiredSession"
-import { useNavigate } from "react-router-dom";
+import Requirements from "../../components/Requirements/Requirements";
 
 function UploadFilesPage() {
   const modalStatus = useFileStore(state => state.modalStatus);
   const accessToken = useFileStore( state => state.accessToken)
-  const navigate = useNavigate();
 
   function render(){
     if(!accessToken){
       return (
-        <ExpiredSession/>
+        <div className="page-container">
+                  <ExpiredSession/>
+        </div>
       )
   } else 
    return (
@@ -33,6 +34,8 @@ function UploadFilesPage() {
         )
      }
     </div> 
+    <Requirements/>
+
     </div>
 
    )

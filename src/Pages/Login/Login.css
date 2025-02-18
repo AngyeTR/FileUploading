@@ -2,3 +2,19 @@
     color:red;
     font-size: 3rem;
 }
+
+
+.login-page-container{
+    /* position: relative; */
+    top: 100px;
+    width: 100vw;
+    height: auto;
+    /* justify-content: center;
+    align-items:start;
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    scroll-behavior: auto; */
+    
+   
+}

@@ -15,7 +15,7 @@ function LoginForm(){
     updateModalStatus(true)
     e.preventDefault();
    const result = await login(user, password)
-   console.log("preset")
+   console.log("preset") 
    console.log("resul", result)
    setLoginAttemp(result);
    

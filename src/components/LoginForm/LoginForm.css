@@ -1,6 +1,6 @@
 .login-container{
-    margin-top: 0;
-      width: 100%; 
+     margin: 0 auto;
+      width: 40%; 
       justify-content: center;
       justify-items: center;
       align-items:center;
@@ -8,6 +8,7 @@
      padding: 20px;
      border-radius: 15px;
      color: white;
+     min-width: 360px;
     }
 .login-container:hover{
     background-color: #192939;

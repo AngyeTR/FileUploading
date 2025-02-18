@@ -3,7 +3,7 @@ import Footer from "../components/Footer/Footer";
 
 function Layout({children}) {
   return (
-    <div className="page-container">
+    <div className="layout-container">
     <Banner />
     {
         children

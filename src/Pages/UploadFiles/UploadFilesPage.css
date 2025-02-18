@@ -1,12 +1,18 @@
 .page-container{
+    position: relative;
+    top: 100px;
     width: 100vw;
-    height: 100%;
+    height: auto;
     justify-content: center;
     align-items:start;
-    margin: auto;
-    display: flex;
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    scroll-behavior: auto;
+    
    
 }
 .uploading-container{
-    margin: 0;
+    margin: 5% 15% 0px;
 }
+

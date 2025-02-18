@@ -2,10 +2,13 @@
     display: block;
     width: 100vw;
     height: 40px;
-    position: absolute;
-    top: 130px;
+    /* position: absolute;
+    top: -100px;  */
+    position: static;
+    top: 20px; 
     margin: auto;
     margin-right: 20px;
+    z-index: 200;
 
 }
 .logout-btn{
@@ -20,6 +23,7 @@
     border-radius: 15px;
    padding-bottom: 2px;
    color: #192939;
+   background-color: rgba(239, 239, 239, 0.8)
     
 }
 .logout-btn:hover{

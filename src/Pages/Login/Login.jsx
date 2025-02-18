@@ -8,17 +8,17 @@ function LoginPage() {
   const modalStatus = useFileStore(state => state.modalStatus)
    
   return (
-    <div >
+    <div className="login-page-container" >
       <LoginForm/>  
       {
         modalStatus && (
         <Modal>
             <Notification mode="login" />
         </Modal>
-        )
+        ) 
      }   
     </div>
   )
 }
 
-export default LoginPage;
+export default LoginPage; 

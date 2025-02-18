@@ -13,12 +13,12 @@ function Notification(props){
     const updateModalStatus = useFileStore( state => state.updateModalStatus);
     const setAccessToken = useFileStore(state => state.setAccessToken)
     const loginAttemp = useFileStore(state => state.loginAttemp);
-    const setLoginAttemp = useFileStore(state => state.setLoginAttemp)
+    const setLoginAttemp = useFileStore(state => state.setLoginAttemp);
 
     const navigate = useNavigate();
 
     function handleClick(){
-        if (mode =="login"){
+        if (mode =="login"){ 
               setLoginAttemp(null);
               navigate("/")
         }
@@ -26,10 +26,10 @@ function Notification(props){
         setFile(null);
         updateModalStatus(false);  
     }
-    const verification = mode== "login" ? loginAttemp : result
+    const verification = mode== "login" ? loginAttemp : result;
 
     function render(){
-        console.log("mode", mode)
+        console.log("mode", mode, verification)
         if(!verification){
             console.log("opcion 1")
             return(
@@ -38,8 +38,9 @@ function Notification(props){
                     <p className="notification-text">Loading</p>
                 </>
             )  }
-        else if(verification.url){
-            console.log("opcion b")
+        // else if(verification.url){
+            else if(verification && !verification.status && mode!="login"){
+            console.log("verifi", verification)
             return(
                 <>
                     <FaRegCheckCircle className="sucessIcon"/>
@@ -58,30 +59,25 @@ function Notification(props){
                 )
         }  
         
-        else 
-        console.log("opcionc")
+        else {
+            console.log("opcionc")
         
-            return(
-                
+            return(  
                 <>
                      <FaRegCircleXmark className="sucessIcon"/>
                      <p className="notification-text">Algo salió mal, por favor intente de nuevo</p>
                      <button onClick={handleClick}>Cerrar</button>
-
                 </>
-            )
-        }
+            )}
+    }
     
     return(
         <div className="notification-container">
             {
                 render()
             }
-             
-             
         </div>
     )
-
 }
 
 export default Notification;

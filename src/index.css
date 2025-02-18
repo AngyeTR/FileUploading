@@ -51,6 +51,7 @@ button {
   background-color: #192939;
   cursor: pointer;
   transition: border-color 0.25s;
+  max-height: 56px;
 }
 button:hover {
   border-color: #646cff;

@@ -4,14 +4,16 @@
     top: 0;
     left: 0;
     position: fixed;
-    padding: 20px;
+    padding:  20px;
     border-bottom: 35px solid #192939;
     background-color: white;
     margin-bottom: 0;
     display:block;
+    z-index: 100;
 }
 .image{
     height: 40px;
     margin-left: 50px;
+    max-width: 240px;
 
 }

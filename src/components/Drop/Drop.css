@@ -1,7 +1,7 @@
 .dropArea{
     background: rgba(133, 189, 202, 0.8);
     width: 70vw;
-    min-width: 400px;
+    min-width: 360px;
     height: 10vh;
     min-height: 50px;
     display: block;

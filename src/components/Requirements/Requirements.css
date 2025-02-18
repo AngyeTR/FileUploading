@@ -1,0 +1,45 @@
+.requirements-container{
+    display: block;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 75vw;
+    margin: 0 15%;
+    margin-bottom: 60px;
+   
+}
+.requirements-container a{
+    cursor: pointer;
+}
+
+.requirements-container a:hover{
+    text-decoration: underline;
+}
+
+.requirements-info{
+    margin: 5px auto;
+    padding: 10px 15px;
+    border: 4px dotted rgba(133, 189, 202, 1);
+    border-radius: 25px;
+}
+
+.hidden-container {
+    display: none;
+}
+
+.requirement-btn{
+    padding: 10px 15px;
+    margin: 2% 5px;
+    min-width: 120px;
+    height: 46px;
+}
+
+.requirement-title {
+    color: #192939;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+
+
