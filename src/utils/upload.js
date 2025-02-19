@@ -1,11 +1,11 @@
-import { API_HOST, API_KEY, UPLOAD_PRESET, API_HOST_TEST } from "./api";
+
 
 export  async function uploadFile(file) {
     const host = import.meta.env.VITE_API_HOST;
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", UPLOAD_PRESET);
-    formData.append("api_key", API_KEY);
+    // formData.append("upload_preset", UPLOAD_PRESET);
+    // formData.append("api_key", API_KEY);
 
     try {
         const res = await fetch(host, 
