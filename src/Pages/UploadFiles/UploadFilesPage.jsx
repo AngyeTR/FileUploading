@@ -4,32 +4,31 @@ import Notification from "../../components/Notification/Notification";
 import Preview from "../../components/Preview/Preview";
 import Modal from "../../components/Modal/Modal";
 import "./UploadFilesPage.css"
-import LogoutBtn from "../../components/Logout-btn.jsx/Logout-btn";
 import ExpiredSession from "../../components/SesionExpired/ExpiredSession"
 import Requirements from "../../components/Requirements/Requirements";
+import { getToken, setToken } from "../../api/cookies";
 
-function UploadFilesPage() {
+function UploadFilesPage({user}) {
+  const token = getToken();
   const modalStatus = useFileStore(state => state.modalStatus);
-  const accessToken = useFileStore( state => state.accessToken)
 
   function render(){
-    if(!accessToken){
+    if(!token){
       return (
         <div className="page-container">
                   <ExpiredSession/>
         </div>
       )
-  } else 
+  } else  
    return (
     <div className="page-container">
-      <LogoutBtn/>
     <div className="uploading-container">
       <Form/>
      <Preview/>
      {
         modalStatus && (
         <Modal>
-            <Notification mode="uploading"/>
+            <Notification />
         </Modal>
         )
      }

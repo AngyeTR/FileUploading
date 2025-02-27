@@ -1,0 +1,17 @@
+.notFound-container{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.notFound-text{
+    margin: 50px;
+}
+.notFound-btn{
+    
+    align-self: center;
+    margin: auto;
+}

@@ -9,4 +9,71 @@
 
 }
 
+.auth-container {
+  height: 50vh;
+  width: 100%;
+  margin: 5px auto;
+  /* background-color: #6ec1e4; */
+}
+.auth-container div:first-child {
+ background-color: #6ec1e4;
+ border-radius: 15px;
+ color: white;
+ min-width: 360px;
+ 
+}
+
+
+.auth-container label{
+  color:white
+}
+
+.auth-container input{
+  display: block;
+  background-color: white;
+  color: #5c5c62;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 5px;
+  border: 0;
+}
+
+.auth-container  button{
+  color: white;
+}
+
+.auth-container form  button{
+  border-radius: 15px;
+  color: white;
+}
+
+.auth-container form div button:hover{
+  background-color: #192939;
+}
+
+.auth-container .amplify-alert{
+  /* background-color: #6ec1e4; */
+  border-radius: 15px;
+  border: 2px dotted #192939;
+  background-color: white;
+  
+}
+.auth-container .amplify-alert div{
+  /* background-color: #6ec1e4; */
+  background-color: white;
+  color: #192939;
+  max-width: 280px;
+}
+.auth-container .amplify-alert button{
+  /* background-color: #6ec1e4; */
+  background-color: white;
+  color: #192939;
+  max-width: 280px;
+}
+
+
+
+
+
+
 

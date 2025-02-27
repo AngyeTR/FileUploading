@@ -1,22 +1,33 @@
-import { useFileStore } from "../../store/fileStore";
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
+import { deleteToken, getToken, setToken } from "../../api/cookies";
 import "./Logout-btn.css"
+import { useEffect, useState } from "react";
+import { signOut } from 'aws-amplify/auth';
+import { Hub } from 'aws-amplify/utils';
+
 
 function LogoutBtn() {
-  const navigate = useNavigate();
-  const setAccessToken = useFileStore(state => state.setAccessToken);
-  const setLoginAttemp = useFileStore(state => state.setLoginAttemp)
+  Hub.listen('auth', (data) => {
+    const access = getToken()
+    access && setShowBtn(true)
+  });
 
-  function handleLogout(){
-        setAccessToken(null);
-        setLoginAttemp(null)
-        navigate("/")
+  const [showBtn, setShowBtn] = useState(false)
+  const access = getToken()
+  useEffect(()=>{
+    access && setShowBtn(true)
+  }, []  )
+  
+  const   handleLogout = async () =>{
+    deleteToken()
+    await signOut()
+    console.log(signOut())
+    setShowBtn(false)
   }
 
   return (
-    
-      <div className="logout-container">
+      // <div  className="logout-container" >
+      <div  className={showBtn ? "logout-container" : "hidden-container"} >
         <div onClick={handleLogout} className="logout-btn">
         <RiLogoutCircleRLine className="logout-icon"/>
             <p className="btn-text">Salir </p>   

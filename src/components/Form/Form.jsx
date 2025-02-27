@@ -14,9 +14,7 @@ function Form(){
         e.preventDefault();
         updateModalStatus(true);
         const response = await uploadFileGFA(file);
-        // const response = await uploadFile(file);
         console.log("response", response)
-
         updateResponse(response); 
     }
     const enabled = ENABLED_TYPES.includes(type)
