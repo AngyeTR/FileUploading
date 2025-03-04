@@ -19,7 +19,8 @@ function Drop(){
                 {
                 isDragActive ?
             <p className="drop-text">Suelte el archivo aquí ...</p> :
-            <p className="drop-text">Arrastre y suelte el archivo aquí,  <br /> o haga click para seleccionar el archivo</p>
+            <p className="drop-text">Arrastre y suelte el archivo aquí,  <br /> 
+            o haga click para seleccionar el archivo <br /></p>
                 }
         </div>
     );}

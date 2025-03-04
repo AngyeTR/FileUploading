@@ -3,7 +3,7 @@ import { FaRegCircleXmark } from "react-icons/fa6";
 import { VscLoading } from "react-icons/vsc";
 import { useFileStore } from "../../store/fileStore";
 import "./Notification.css"
-import { getToken } from "../../api/cookies";
+import { deleteToken, getToken } from "../../api/cookies";
 
 function Notification(){
     const result = useFileStore( state => state.uploadingResult);
@@ -37,6 +37,9 @@ function Notification(){
                 )
         }  
         else {
+            if(verification && verification.status == 401 ){
+                deleteToken()
+            }
             return(  
                 <>
                      <FaRegCircleXmark className="sucessIcon"/>

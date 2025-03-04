@@ -1,16 +1,20 @@
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import { deleteToken, getToken, setToken } from "../../api/cookies";
-import "./Logout-btn.css"
 import { useEffect, useState } from "react";
 import { signOut } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
+import { deleteToken, getToken, setToken } from "../../api/cookies";
+import "./Logout-btn.css"
 
 
 function LogoutBtn() {
   Hub.listen('auth', (data) => {
-    const access = getToken()
-    access && setShowBtn(true)
-  });
+    if(data.payload.event == 'signedOut'){
+      setShowBtn(false)
+      }
+      else if(data.payload.event == 'signedIn'){
+        setShowBtn(true)
+      }
+    });
 
   const [showBtn, setShowBtn] = useState(false)
   const access = getToken()
@@ -19,10 +23,11 @@ function LogoutBtn() {
   }, []  )
   
   const   handleLogout = async () =>{
+    setShowBtn(false)
     deleteToken()
     await signOut()
     console.log(signOut())
-    setShowBtn(false)
+   
   }
 
   return (

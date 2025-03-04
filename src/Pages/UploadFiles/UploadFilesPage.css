@@ -1,10 +1,9 @@
 .page-container{
     position: relative;
-    top: 100px;
     width: 100vw;
     height: auto;
     justify-content: center;
-    align-items:start;
+    align-items:center;
     margin: 0px;
     display:flex;
     flex-direction: column;
@@ -13,6 +12,6 @@
    
 }
 .uploading-container{
-    margin: 5% 15% 0px;
+    margin: 5% auto;
 }
 

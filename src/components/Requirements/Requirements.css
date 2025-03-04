@@ -20,6 +20,7 @@
     padding: 10px 15px;
     border: 4px dotted rgba(133, 189, 202, 1);
     border-radius: 25px;
+    min-width: 380px;
 }
 
 .hidden-container {
@@ -37,6 +38,12 @@
     color: #192939;
     font-size: 1rem;
     text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .requirements-container{
+        width: 85vw;       
+    }
 }
 
 

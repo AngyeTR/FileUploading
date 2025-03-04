@@ -43,3 +43,14 @@
 .hidden-container {
     display: none;
 }
+
+@media only screen and (max-width: 500px) {
+    .logout-btn{
+        width: 50px;
+        height: 40px;
+    .btn-text{
+        display: none;  
+    }
+
+}
+

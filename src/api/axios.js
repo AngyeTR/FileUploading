@@ -2,7 +2,8 @@ import { getToken} from "./cookies"
 import axios from 'axios';
 
 const host = import.meta.env.VITE_API_HOST;
-const token = getToken();
+let token = getToken();
+
 const defaultOptions = {
     baseURL: host,
     headers: {
@@ -23,13 +24,20 @@ axiosInstance.interceptors.request.use(function (config) {
  return Promise.reject(error);
 };
 
+export const axiosInst = ()=> {
+  token = getToken()
+  console.log("Ax token", token)
 
-export const axiosInst =  axios.create({
+  axios.create({
     baseURL: host,
     headers: {
-        Authorization: `Bearer ${token}`,
+      "Authorization": "Bearer "+ token,
+      // "Authorization": `Bearer ${token}`,
       'Content-Type': 'multipart/form-data',
+      
     },
 })
+} 
+ 
 
  export default axiosInstance;

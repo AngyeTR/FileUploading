@@ -1,4 +1,4 @@
-import { uploadFile, uploadFileGFA } from "../../utils/upload";
+import { uploadFileGFA } from "../../utils/upload";
 import { useFileStore } from "../../store/fileStore"
 import Drop from "../Drop/Drop";
 import "./Form.css";

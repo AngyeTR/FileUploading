@@ -15,5 +15,10 @@
     height: 40px;
     margin-left: 50px;
     max-width: 240px;
-
 }
+
+@media only screen and (max-width: 500px) {
+    .image{
+        margin-left: 5px;
+    }
+  }
